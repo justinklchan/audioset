@@ -4,12 +4,12 @@ from tqdm import tqdm
 def download(vid):
 	ydl_opts = {
 	    'format': 'bestaudio/best',
-	    'postprocessors': [{
-	        'key': 'FFmpegExtractAudio',
-	        'preferredcodec': 'mp3',
-	        'preferredquality': '192',
-	    }],
-    	'audioformat':'mp3',
+	    # 'postprocessors': [{
+	    #     'key': 'FFmpegExtractAudio',
+	    #     'preferredcodec': 'mp3',
+	    #     'preferredquality': '192',
+	    # }],
+    	# 'audioformat':'mp3',
 	    'extractaudio':True,
 	    'outtmpl': u'%(id)s.%(ext)s',
 	}
