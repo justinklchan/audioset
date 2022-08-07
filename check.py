@@ -8,6 +8,16 @@ def handler(signum, frame):
 
 	sys.exit(0)
 
+def get_info(vid):
+	ydl_opts = {}
+	with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+	    dictMeta = ydl.extract_info(
+	        "https://www.youtube.com/watch?v={sID}".format(sID=vid),
+	        download=False)
+	    # print (dictMeta.keys())
+	    # print (dictMeta)
+	    return dictMeta['duration']<60*10
+
 def download(id,vid):
 	ydl_opts = {
 	    'format': 'bestaudio/best',
@@ -42,9 +52,19 @@ for id in ['/m/015p6']:
 		counter=0
 		for vid in tqdm(vids):
 			try :
-				download(file_id,vid)
-				counter+=1
+				if get_info(vid):
+					counter+=1
+					# print (counter,len(vids),counter/len(vids))
+					download(file_id,vid)
 				if counter == 350:
 					break
-			except:
-				print ('err ',vid)
+			except Exception as e:
+				if 'unavailable' in str(e):
+					print ('UNAVAILABLE')
+				else:
+					print (e)
+
+
+
+
+
