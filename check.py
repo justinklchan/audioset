@@ -1,6 +1,7 @@
 import youtube_dl
 from tqdm import tqdm
 import signal
+import os
 import sys
 
 def handler(signum, frame):
