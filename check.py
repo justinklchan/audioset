@@ -26,7 +26,7 @@ signal.signal(signal.SIGINT, handler)
 
 
 for id in ['/m/015p6']:
-	if not os.path.exists(id):
+	if not os.path.exists('_'+id):
 		os.mkdir('_'+id)
 	for file in ['eval_segments','balanced_train_segments','unbalanced_train_segments']:
 		lines=open(file+'.csv').read().split('\n')
