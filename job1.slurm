@@ -17,4 +17,4 @@
 #SBATCH --output=/gscratch/cse/jucha/audioset/1/output.txt # where STDOUT goes
 #SBATCH --error=/gscratch/cse/jucha/audioset/1/err.txt # where STDERR goes
 
-python3 check.py 0 4
+python3 check.py 0 2
