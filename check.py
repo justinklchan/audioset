@@ -27,4 +27,7 @@ for file in ['eval_segments','balanced_train_segments','unbalanced_train_segment
 			if len(elts)-3==1:
 				vids.append(elts[0])
 	for vid in tqdm(vids):
-		download(vid)
+		try :
+			download(vid)
+		except:
+			print ('err ',vid)
