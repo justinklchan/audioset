@@ -5,6 +5,7 @@ import os
 import sys
 
 def handler(signum, frame):
+
 	sys.exit(0)
 
 def download(id,vid):
@@ -17,7 +18,7 @@ def download(id,vid):
 	    # }],
     	# 'audioformat':'mp3',
 	    'extractaudio':True,
-	    'outtmpl': id+u'%(id)s.%(ext)s',
+	    'outtmpl': id+'/'+u'%(id)s.%(ext)s',
 	}
 	with youtube_dl.YoutubeDL(ydl_opts) as ydl:
 	    ydl.download(['http://www.youtube.com/watch?v='+vid])
