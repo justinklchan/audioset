@@ -26,8 +26,9 @@ signal.signal(signal.SIGINT, handler)
 
 
 for id in ['/m/015p6']:
-	if not os.path.exists('_'+id):
-		os.mkdir('_'+id)
+	file_id = id.replace('/','_')
+	if not os.path.exists(file_id):
+		os.mkdir(file_id)
 	for file in ['eval_segments','balanced_train_segments','unbalanced_train_segments']:
 		lines=open(file+'.csv').read().split('\n')
 		vids=[]
@@ -40,7 +41,7 @@ for id in ['/m/015p6']:
 		counter=0
 		for vid in tqdm(vids):
 			try :
-				download(id,vid)
+				download(file_id,vid)
 				counter+=1
 				if counter == 350:
 					break
