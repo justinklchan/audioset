@@ -54,6 +54,10 @@ ids=['/m/015p6',
 '/m/03qtwd',
 '/m/04229']
 
+print (sys.argv)
+ids=ids[int(sys.argv[1]):int(sys.argv[2])]
+print (ids)
+
 def downloaded(files,vid):
 	for file in files:
 		if vid in file:

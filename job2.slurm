@@ -9,12 +9,12 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=4
 #SBATCH --mem=10G
-#SBATCH --gpus=1
+#SBATCH --gpus=0
 #SBATCH --time=00-24:00:00 # Max runtime in DD-HH:MM:SS format.
 
 #SBATCH --chdir=/gscratch/cse/jucha/audioset/
 #SBATCH --export=all
-#SBATCH --output=/gscratch/cse/jucha/audioset/output.txt # where STDOUT goes
-#SBATCH --error=/gscratch/cse/jucha/audioset/err.txt # where STDERR goes
+#SBATCH --output=/gscratch/cse/jucha/audioset/2/output.txt # where STDOUT goes
+#SBATCH --error=/gscratch/cse/jucha/audioset/2/err.txt # where STDERR goes
 
-python3 check.py
+python3 check.py 4 8
