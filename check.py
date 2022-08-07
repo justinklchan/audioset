@@ -67,7 +67,7 @@ for id in ids:
 	
 	files=os.listdir(file_id)
 	n_files=len(files)
-	target_n=350-n_files+1
+	target_n=100-n_files+1
 
 	print ('TARGET ',target_n)
 	for file in ['eval_segments','balanced_train_segments','unbalanced_train_segments']:
