@@ -23,4 +23,5 @@ ids=['/m/015p6',
 for i in ids:
 	ni=i.replace('/','_')
 	fs=os.listdir(ni)
-	print (ni,len(fs))
+	if len(fs)<301:
+		print (ni,len(fs))
