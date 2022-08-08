@@ -47,6 +47,7 @@ for id in ids:
 			fs.append(i)
 
 	for file in tqdm(fs):
+		oname=file
 		if '.m4a' in file:
 			file=file[:-4]
 		elif '.webm' in file:
@@ -54,7 +55,7 @@ for id in ids:
 		if not os.path.exists(os.path.join(nid,file+'_out.wav')):
 			start,l=find(file)
 			file=os.path.join(nid,file)
-			cmd = 'ffmpeg -ss '+str(start)+' -i "'+file+'.m4a" -t '+str(l)+' "'+file+'_out.wav"'
+			cmd = 'ffmpeg -ss '+str(start)+' -i "'+oname+'" -t '+str(l)+' "'+file+'_out.wav"'
 			print (cmd)
 			os.system(cmd)
 
