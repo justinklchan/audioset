@@ -5,7 +5,7 @@
 #SBATCH --mail-user=jucha@cs.washington.edu
 
 #SBATCH --account=cse
-#SBATCH --partition=gpu-rtx6k
+#SBATCH --partition=gpu-a40
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=4
 #SBATCH --mem=10G
