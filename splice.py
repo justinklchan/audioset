@@ -38,7 +38,7 @@ print (sys.argv)
 ids=ids[int(sys.argv[1]):int(sys.argv[2])]
 print (ids)
 
-for id in tqdm(ids):
+for id in ids:
 	nid=id.replace('/','_')
 	fs_temp=os.listdir(nid)
 	fs=[]
@@ -46,7 +46,7 @@ for id in tqdm(ids):
 		if '_out.wav' not in i and '.part' not in i:
 			fs.append(i)
 
-	for file in fs:
+	for file in tqdm(fs):
 		if '.m4a' in file:
 			file=file[:-4]
 		elif '.webm' in file:
