@@ -9,7 +9,7 @@ def find(file):
 			if file in line:
 				print ('FOUND IT')
 				elts=line.split(',')
-				return elts[1],elts[2]-elts[1]
+				return float(elts[1]),float(elts[2])-float(elts[1])
 
 ids=['/m/015p6',
 '/m/02rlv9',
