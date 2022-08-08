@@ -26,8 +26,8 @@ import os
 
 lines=open('class_labels_indices.csv').read().split('\n')
 
+mmap={}
 for i in ids:
-
 	name=""
 	for j in lines:
 		if i in j:
@@ -40,5 +40,11 @@ for i in ids:
 	for i in fs:
 		if '.wav' not in i:
 			fs2.append(i)
-	if len(fs2)<301:
-		print (ni,name,len(fs2))
+		mmap[ni+","+name]=len(fs2)
+
+smap=dict(sorted(mmap.items(), reverse=True, key=lambda item: item[1]))
+print (smap)
+
+
+
+
