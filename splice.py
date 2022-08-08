@@ -42,7 +42,10 @@ for id in tqdm(ids):
 	nid=id.replace('/','_')
 	fs=os.listdir(nid)
 	for file in fs:
-		file=file[:-4]
+		if '.m4a' in file:
+			file=file[:-4]
+		elif '.webm' in file:
+			file=file[:-5]
 		if not os.path.exists(os.path.join(nid,file+'_out.wav')):
 			start,l=find(file)
 			file=os.path.join(nid,file)
