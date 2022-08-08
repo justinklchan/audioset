@@ -13,7 +13,7 @@ def get_info(vid):
 	    dictMeta = ydl.extract_info(
 	        "https://www.youtube.com/watch?v={sID}".format(sID=vid),
 	        download=False)
-	    return dictMeta['duration']<60*10
+	    return dictMeta['duration']#<60*10
 
 def download(id,vid):
 	ydl_opts = {
