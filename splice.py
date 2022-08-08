@@ -39,9 +39,9 @@ for id in tqdm(ids):
 	nid=id.replace('/','_')
 	fs=os.listdir(nid)
 	for file in fs:
+		print (file)
 		start,l=find(file)
 		file=os.path.join(nid,file)
-		print (file)
 		cmd = 'ffmpeg -ss '+str(start)+' -i "'+file+'.m4a" -t '+str(l)+' "'+file+'_out.wav"'
 		print (cmd)
 		os.system(cmd)
