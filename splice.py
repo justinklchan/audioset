@@ -37,7 +37,7 @@ print (ids)
 
 for id in tqdm(ids):
 	nid=id.replace('/','_')
-	fs=os.listdir(id)
+	fs=os.listdir(nid)
 	for file in fs:
 		start,l=find(file)
 		file=os.path.join(nid,file)
