@@ -43,9 +43,9 @@ for id in tqdm(ids):
 	fs_temp=os.listdir(nid)
 	fs=[]
 	for i in fs_temp:
-		if '_out.wav' not in i:
+		if '_out.wav' not in i and '.part' not in i:
 			fs.append(i)
-			
+
 	for file in fs:
 		if '.m4a' in file:
 			file=file[:-4]
