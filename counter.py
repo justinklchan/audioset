@@ -32,4 +32,5 @@ for i in ids:
 
 	ni=i.replace('/','_')
 	fs=os.listdir(ni)
-	print (ni,name,len(fs))
+	if len(fs)<301:
+		print (ni,name,len(fs))
