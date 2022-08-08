@@ -32,5 +32,9 @@ for i in ids:
 
 	ni=i.replace('/','_')
 	fs=os.listdir(ni)
-	if len(fs)<301:
-		print (ni,name,len(fs))
+	fs2=[]
+	for i in fs:
+		if '.wav' not in i:
+			fs2.append(i)
+	if len(fs2)<301:
+		print (ni,name,len(fs2))
