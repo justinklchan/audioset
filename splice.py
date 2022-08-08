@@ -7,9 +7,11 @@ def find(file):
 		lines=open(lookup+'.csv').read().split('\n')
 		for line in lines:
 			if file in line:
-				print ('FOUND IT')
+				print ('FOUND ',file)
 				elts=line.split(',')
 				return float(elts[1]),float(elts[2])-float(elts[1])
+
+	print ('NOT FOUND ',file)
 
 ids=['/m/015p6',
 '/m/02rlv9',
@@ -41,11 +43,12 @@ for id in tqdm(ids):
 	fs=os.listdir(nid)
 	for file in fs:
 		file=file[:-4]
-		start,l=find(file)
-		file=os.path.join(nid,file)
-		cmd = 'ffmpeg -ss '+str(start)+' -i "'+file+'.m4a" -t '+str(l)+' "'+file+'_out.wav"'
-		print (cmd)
-		os.system(cmd)
+		if not os.path.exists(file+'.wav'):
+			start,l=find(file)
+			file=os.path.join(nid,file)
+			cmd = 'ffmpeg -ss '+str(start)+' -i "'+file+'.m4a" -t '+str(l)+' "'+file+'_out.wav"'
+			print (cmd)
+			os.system(cmd)
 
 
 
