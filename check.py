@@ -55,16 +55,7 @@ signal.signal(signal.SIGINT, handler)
 # '/m/07qfr4h']
 
 ids=[
-'/m/07rkbfh',
-'/m/05kq4',
-'/m/0cmf2',
-'/m/03wwcy',
-'/m/0c3f7m',
-'/m/0btp2',
-'/m/03p19w',
-'/m/07qwf61',
-'/m/07q7njn',
-'/m/04229']
+'/m/07qfr4h']
 
 print (sys.argv)
 ids=ids[int(sys.argv[1]):int(sys.argv[2])]
