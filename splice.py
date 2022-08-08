@@ -43,7 +43,7 @@ for id in tqdm(ids):
 	fs=os.listdir(nid)
 	for file in fs:
 		file=file[:-4]
-		if not os.path.exists(file+'.wav'):
+		if not os.path.exists(file+'_out.wav'):
 			start,l=find(file)
 			file=os.path.join(nid,file)
 			cmd = 'ffmpeg -ss '+str(start)+' -i "'+file+'.m4a" -t '+str(l)+' "'+file+'_out.wav"'
