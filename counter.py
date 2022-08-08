@@ -1,4 +1,3 @@
-import os
 ids=['/m/015p6',
 '/m/02rlv9',
 '/m/07rkbfh',
@@ -18,7 +17,12 @@ ids=['/m/015p6',
 '/m/07q7njn',
 '/m/04rlf',
 '/m/03qtwd',
+'/m/04229',
+'/m/07qfr4h',
+'/m/0912c9',
 '/m/04229']
+
+import os
 
 lines=open('class_labels_indices.csv').read().split('\n')
 

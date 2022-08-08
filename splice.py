@@ -1,18 +1,3 @@
-import os
-import sys
-from tqdm import tqdm
-
-def find(file):
-	for lookup in ['unbalanced_train_segments','eval_segments','balanced_train_segments']:
-		lines=open(lookup+'.csv').read().split('\n')
-		for line in lines:
-			if file in line:
-				print ('FOUND ',file)
-				elts=line.split(',')
-				return float(elts[1]),float(elts[2])-float(elts[1])
-
-	print ('NOT FOUND ',file)
-
 ids=['/m/015p6',
 '/m/02rlv9',
 '/m/07rkbfh',
@@ -32,7 +17,25 @@ ids=['/m/015p6',
 '/m/07q7njn',
 '/m/04rlf',
 '/m/03qtwd',
+'/m/04229',
+'/m/07qfr4h',
+'/m/0912c9',
 '/m/04229']
+
+import os
+import sys
+from tqdm import tqdm
+
+def find(file):
+	for lookup in ['unbalanced_train_segments','eval_segments','balanced_train_segments']:
+		lines=open(lookup+'.csv').read().split('\n')
+		for line in lines:
+			if file in line:
+				print ('FOUND ',file)
+				elts=line.split(',')
+				return float(elts[1]),float(elts[2])-float(elts[1])
+
+	print ('NOT FOUND ',file)
 
 print (sys.argv)
 ids=ids[int(sys.argv[1]):int(sys.argv[2])]
