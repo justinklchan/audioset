@@ -38,6 +38,7 @@ print (sys.argv)
 ids=ids[int(sys.argv[1]):int(sys.argv[2])]
 print (ids)
 
+folder_id=0
 for id in ids:
 	nid=id.replace('/','_')
 	fs_temp=os.listdir(nid)
@@ -59,7 +60,8 @@ for id in ids:
 			cmd = 'ffmpeg -ss '+str(start)+' -i "'+oname+'" -t '+str(l)+' "'+file+'_out.wav"'
 			print (cmd)
 			os.system(cmd)
-
+			print ("FOLDER ",folder_id,len(ids))
+	folder_id+=1
 
 
 
