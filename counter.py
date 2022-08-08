@@ -43,7 +43,8 @@ for i in ids:
 		mmap[ni+","+name]=len(fs2)
 
 smap=dict(sorted(mmap.items(), reverse=True, key=lambda item: item[1]))
-print (smap)
+for i in smap.keys():
+	print (i,smap[i])
 
 
 
