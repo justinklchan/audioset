@@ -52,7 +52,8 @@ ids=['/m/015p6',
 '/m/04rlf',
 '/m/03qtwd',
 '/m/04229',
-'/m/07qfr4h']
+'/m/07qfr4h',
+'/m/0912c9',]
 
 print (sys.argv)
 ids=ids[int(sys.argv[1]):int(sys.argv[2])]
