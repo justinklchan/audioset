@@ -55,6 +55,7 @@ for id in ids:
 		if not os.path.exists(os.path.join(nid,file+'_out.wav')):
 			start,l=find(file)
 			file=os.path.join(nid,file)
+			oname=os.path.join(nid,oname)
 			cmd = 'ffmpeg -ss '+str(start)+' -i "'+oname+'" -t '+str(l)+' "'+file+'_out.wav"'
 			print (cmd)
 			os.system(cmd)
