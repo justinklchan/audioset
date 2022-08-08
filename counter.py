@@ -21,5 +21,6 @@ ids=['/m/015p6',
 '/m/04229']
 
 for i in ids:
-	fs=os.listdir('_'+i)
-	print (i,len(fs))
+	ni=i.replace('/','_')
+	fs=os.listdir(ni)
+	print (ni,len(fs))
