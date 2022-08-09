@@ -1,5 +1,6 @@
 import shutil
 import sys
+import os
 className=sys.argv[1]
 
 if not os.path.exists('/gscratch/cse/jucha/audioset/UrbanSounds8K/UrbanSound8K/audio/'+className):
