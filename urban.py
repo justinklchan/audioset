@@ -4,6 +4,7 @@ className='car_horn'
 lines=open('/gscratch/cse/jucha/audioset/UrbanSounds8K/UrbanSound8K/metadata/UrbanSound8K.csv').read().split('\n')[1:]
 for line in lines:
 	elts=line.split(',')
+	print (line)
 	if elts[-1]==className:
 		fold=elts[-3]
 		fid=elts[0]
