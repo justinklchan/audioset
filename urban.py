@@ -1,6 +1,10 @@
 import shutil
+import sys
+className=sys.argv[1]
 
-className='car_horn'
+if not os.path.exists('/gscratch/cse/jucha/audioset/UrbanSounds8K/UrbanSound8K/audio/'+className):
+	os.mkdir('/gscratch/cse/jucha/audioset/UrbanSounds8K/UrbanSound8K/audio/'+className)
+
 lines=open('/gscratch/cse/jucha/audioset/UrbanSounds8K/UrbanSound8K/metadata/UrbanSound8K.csv').read().split('\n')[1:]
 for line in lines:
 	elts=line.split(',')
