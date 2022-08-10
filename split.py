@@ -31,8 +31,8 @@ def closest(my_list, my_number):
     return l[-1]
 
 def split_urban():
-	train_fout=open('/gscratch/cse/jucha/FSDKaggle2018_audioset/FSDKaggle2018.meta/train_post_competition.csv','a')
-	test_fout=open('/gscratch/cse/jucha/FSDKaggle2018_audioset/FSDKaggle2018.meta/test_post_competition_scoring_clips.csv','a')
+	fout_train=open('/gscratch/cse/jucha/FSDKaggle2018_audioset/FSDKaggle2018.meta/train_post_competition.csv','a')
+	fout_test=open('/gscratch/cse/jucha/FSDKaggle2018_audioset/FSDKaggle2018.meta/test_post_competition_scoring_clips.csv','a')
 
 	od='/gscratch/cse/jucha/audioset/curated/'
 	nd_train='/gscratch/cse/jucha/FSDKaggle2018_audioset/FSDKaggle2018.audio_train/'
@@ -77,6 +77,7 @@ def split_urban():
 		for i in fs:
 			if '.wav' in i:
 				elts=i.split('-')[0]
+				print (elts)
 				if elts in train_keys and not os.path.exists(nd_train+i):
 					# print ('train ',i)
 					oname=od+c+'_subset/'+i
@@ -93,8 +94,8 @@ def split_urban():
 					fout_test.write(i,label_map[c],'1,0,Attribution')
 		# break
 
-	train_fout.close()
-	test_fout.close()
+	fout_train.close()
+	fout_test.close()
 
 def split_yt():
 	label_map={
