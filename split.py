@@ -20,7 +20,7 @@ label_map={
 	'_m_05kq4':'Ocean'
 }
 
-fout=open('/gscratch/cse/jucha/FSDKaggle2018_audioset/FSDKaggle2018.meta/test_post_competition.csv','a')
+fout=open('/gscratch/cse/jucha/FSDKaggle2018_audioset/FSDKaggle2018.meta/test_post_competition_scoring_clips.csv','a')
 od='/gscratch/cse/jucha/audioset/curated/'
 nd='/gscratch/cse/jucha/FSDKaggle2018_audioset/FSDKaggle2018.audio_test/'
 for c in ['_m_015p6','_t_dd00002','_m_0d31p','_m_05kq4']:
@@ -31,7 +31,7 @@ for c in ['_m_015p6','_t_dd00002','_m_0d31p','_m_05kq4']:
 	for i in train:
 		oname=od+c+'/'+i
 		nname=nd+i
-		shutil.copy(oname,nname)
+		# shutil.copy(oname,nname)
 		text=i+','+label_map[c]+',1,0,attribution\n'
 		fout.write (text)
 		# print (oname)
