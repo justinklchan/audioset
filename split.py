@@ -3,6 +3,7 @@ import shutil
 import itertools
 from tqdm import tqdm
 import random
+import sys
 
 random.seed(1)
 
@@ -46,8 +47,8 @@ def split_urban():
 		# 'jackhammer':'Jackhammer',
 		'siren':'Siren'
 	}
-	# 'air_conditioner','car_horn','dog_bark','drilling',
-	for c in ['siren']:
+	
+	for c in ['air_conditioner','car_horn','dog_bark','drilling','siren']:
 		fs=sorted(os.listdir(od+c+'_subset'))
 
 		ufiles={}
@@ -85,14 +86,14 @@ def split_urban():
 					nname=nd_train+i
 					# print (oname,nname)
 					shutil.copy(oname,nname)
-					fout_train.write(i+','+label_map[c]+',1,0,Attribution')
+					fout_train.write(i+','+label_map[c]+',1,0,Attribution\n')
 				if elts in test_keys and not os.path.exists(nd_test+i):
 					# print ('test ',i)
 					oname=od+c+'_subset/'+i
 					nname=nd_test+i
 					# print (oname,nname)
 					shutil.copy(oname,nname)
-					fout_test.write(i+','+label_map[c]+',1,0,Attribution')
+					fout_test.write(i+','+label_map[c]+',1,0,Attribution\n')
 		# break
 
 	fout_train.close()
@@ -136,7 +137,10 @@ def split_yt():
 			fout.write (text)
 	fout.close()
 
-split_urban()
+if sys.argv[1]==1:
+	split_yt()
+elif sys.argv[1]==2:
+	split_urban()
 
 
 
