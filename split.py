@@ -29,7 +29,7 @@ for c in ['_m_015p6','_t_dd00002','_m_0d31p','_m_05kq4']:
 	print (len(train))
 	for i in train:
 		oname=od+c+'/'+i
-		nname=nd+c+'/'+i
+		nname=nd+i
 		# shutil.copy(oname,nname)
 		text=i+','+label_map[c]+',1,0,attribution\n'
 		# fout.write (text)
