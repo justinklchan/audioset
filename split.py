@@ -91,7 +91,7 @@ def split_urban():
 					nname=nd_test+i
 					# print (oname,nname)
 					shutil.copy(oname,nname)
-					fout_test.write(i+','+label_map[c]',1,0,Attribution')
+					fout_test.write(i+','+label_map[c]+',1,0,Attribution')
 		# break
 
 	fout_train.close()
