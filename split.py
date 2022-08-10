@@ -84,14 +84,14 @@ def split_urban():
 					nname=nd_train+i
 					# print (oname,nname)
 					shutil.copy(oname,nname)
-					fout_train.write(i,label_map[c],'1,0,Attribution')
+					fout_train.write(i+','+label_map[c]+',1,0,Attribution')
 				if elts in test_keys and not os.path.exists(nd_test+i):
 					# print ('test ',i)
 					oname=od+c+'_subset/'+i
 					nname=nd_test+i
 					# print (oname,nname)
 					shutil.copy(oname,nname)
-					fout_test.write(i,label_map[c],'1,0,Attribution')
+					fout_test.write(i+','+label_map[c]',1,0,Attribution')
 		# break
 
 	fout_train.close()
