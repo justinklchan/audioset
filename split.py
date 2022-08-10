@@ -47,7 +47,7 @@ def split_urban():
 		'siren':'Siren'
 	}
 	for c in ['air_conditioner','car_horn','dog_bark','drilling','engine_idling','jackhammer','siren']:
-		fs=sorted(os.listdir(c+'_subset'))
+		fs=sorted(os.listdir(od+c+'_subset'))
 
 		ufiles={}
 		for i in fs:
