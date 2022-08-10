@@ -137,9 +137,9 @@ def split_yt():
 			fout.write (text)
 	fout.close()
 
-if sys.argv[1]==1:
+if int(sys.argv[1])==1:
 	split_yt()
-elif sys.argv[1]==2:
+elif int(sys.argv[1])==2:
 	split_urban()
 
 
