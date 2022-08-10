@@ -30,12 +30,12 @@ for c in ['_m_015p6','_t_dd00002','_m_0d31p','_m_05kq4']:
 	for i in train:
 		oname=od+c+'/'+i
 		nname=nd+i
-		# shutil.copy(oname,nname)
+		shutil.copy(oname,nname)
 		text=i+','+label_map[c]+',1,0,attribution\n'
-		# fout.write (text)
-		print (oname)
-		print (nname)
-		print (text)
+		fout.write (text)
+		# print (oname)
+		# print (nname)
+		# print (text)
 	# fff81f55.wav,Cough,1,19117,Attribution
 fout.close()
 
