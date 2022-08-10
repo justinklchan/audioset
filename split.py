@@ -22,7 +22,7 @@ label_map={
 
 fout=open('/gscratch/cse/jucha/FSDKaggle2018_audioset/FSDKaggle2018.meta/train_post_competition.csv','a')
 od='/gscratch/cse/jucha/audioset/curated/'
-nd='/gscratch/cse/jucha/FSDKaggle2018_audioset/FSDKaggle2018.train/'
+nd='/gscratch/cse/jucha/FSDKaggle2018_audioset/FSDKaggle2018.audio_train/'
 for c in ['_m_015p6','_t_dd00002','_m_0d31p','_m_05kq4']:
 	fs=sorted(os.listdir(od+c))
 	train=fs[:int(len(fs)*.9)]
