@@ -79,14 +79,14 @@ def split_urban():
 				elts=i.split('-')[0]
 				if elts in train_keys and not os.path.exists(nd_train+i):
 					print ('train ',i)
-					oname=od+c+'/'+i
+					oname=od+c+'_subset/'+i
 					nname=nd_train+i
 					print (oname,nname)
 					# shutil.copy(oname,nname)
 					# fout_train.write(i,label_map[c],'1,0,Attribution')
 				if elts in test_keys and not os.path.exists(nd_test+i):
 					print ('test ',i)
-					oname=od+c+'/'+i
+					oname=od+c+'_subset/'+i
 					nname=nd_test+i
 					print (oname,nname)
 					# shutil.copy(oname,nname)
