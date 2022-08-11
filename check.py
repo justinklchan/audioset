@@ -97,6 +97,7 @@ for id in ids:
 					vids.append(elts[0])
 
 		counter=0
+		print ('vids ',len(vids))
 		for vid in tqdm(vids):
 			try :
 				if get_info(vid) and not downloaded(files,vid):
