@@ -22,15 +22,15 @@
 # '/m/0912c9',
 # '/m/04229']
 ids=[
-    "_m_03qtwd",
-    "_m_02rlv9",
-    "_m_07rkbfh",
-    "_m_07qfr4h",
-    "_m_0c3f7m",
-    "_m_03m9d0z",
-    "_m_0912c9",
-    "_m_04rlf",
-    "_m_07pbtc8"
+    "/m/03qtwd",
+    "/m/02rlv9",
+    "/m/07rkbfh",
+    "/m/07qfr4h",
+    "/m/0c3f7m",
+    "/m/03m9d0z",
+    "/m/0912c9",
+    "/m/04rlf",
+    "/m/07pbtc8"
 ]
 
 import youtube_dl
