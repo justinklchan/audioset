@@ -23,17 +23,30 @@
 # '/m/0912c9',
 # '/m/04229']
 ids=[
-    "_m_03qtwd",
-    "_m_02rlv9",
-    "_m_07rkbfh",
-    "_m_07qfr4h",
-    "_m_0c3f7m",
-    "_m_03m9d0z",
-    "_m_04rlf",
-    "_m_07pbtc8"
+	"/m/015p6",
+	"/t/dd00002",
+	"/m/0d31p",
+	"/m/0cmf2",
+	"/m/0838f",
+	"/m/05kq4",
+
+    # "_m_03qtwd",
+    # "_m_02rlv9",
+    # "_m_07rkbfh",
+    # "_m_07qfr4h",
+    # "_m_0c3f7m",
+    # "_m_03m9d0z",
+    # "_m_04rlf",
+    # "_m_07pbtc8"
 ]
 
 namemap={
+	"_m_015p6":"bird",
+	"_t_dd00002":"baby",
+	"_m_0d31p":"vacuum",
+	"_m_0cmf2":"airplane",
+	"_m_0838f":"water",
+	"_m_05kq4":"ocean",
 	"_m_03qtwd":"crowd",
     "_m_02rlv9":"motorboat",
     "_m_07rkbfh":"chatter",
@@ -69,7 +82,6 @@ for i in smap.keys():
 	print (i,namemap[i[:-1]],smap[i])
 
 print (len(smap.keys()))
-
 
 
 
