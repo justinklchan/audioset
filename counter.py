@@ -33,7 +33,7 @@ ids=[
     "_m_07pbtc8"
 ]
 
-mmap={
+namemap={
 	"_m_03qtwd":"crowd",
     "_m_02rlv9":"motorboat",
     "_m_07rkbfh":"chatter",
@@ -66,7 +66,7 @@ for i in ids:
 
 smap=dict(sorted(mmap.items(), reverse=True, key=lambda item: item[1]))
 for i in smap.keys():
-	print (i,mmap[i],smap[i])
+	print (i,namemap[i],smap[i])
 
 print (len(smap.keys()))
 
