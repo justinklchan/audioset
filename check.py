@@ -33,16 +33,6 @@ ids=[
     "_m_07pbtc8"
 ]
 
-    # crowd (_m_03qtwd)
-    # motorboat (_m_02rlv9)
-    # chatter (_m_07rkbfh)
-    # speech (_m_07qfr4h)
-    # fire alarm (_m_0c3f7m)
-    # wind (_m_03m9d0z)
-    # car honk (_m_0912c9)
-    # music (_m_04rlf)
-    # crowd (_m_03qtwd)
-
 import youtube_dl
 from tqdm import tqdm
 import signal
@@ -94,7 +84,7 @@ for id in ids:
 	
 	files=os.listdir(file_id)
 	n_files=len(files)
-	target_n=n_files+1
+	target_n=600
 
 	print ('TARGET ',target_n)
 	for file in ['eval_segments','balanced_train_segments','unbalanced_train_segments']:
