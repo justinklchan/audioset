@@ -29,10 +29,21 @@ ids=[
     "_m_07qfr4h",
     "_m_0c3f7m",
     "_m_03m9d0z",
-    "_m_0912c9",
     "_m_04rlf",
-    "_m_03qtwd",
+    "_m_07pbtc8"
 ]
+
+mmap={
+	"_m_03qtwd":"crowd",
+    "_m_02rlv9":"motorboat",
+    "_m_07rkbfh":"chatter",
+    "_m_07qfr4h":"speech",
+    "_m_0c3f7m":"fire alarm",
+    "_m_03m9d0z":"wind",
+    "_m_04rlf":"music",
+    "_m_07pbtc8":"walk"
+}
+
 import os
 
 lines=open('class_labels_indices.csv').read().split('\n')
@@ -55,7 +66,7 @@ for i in ids:
 
 smap=dict(sorted(mmap.items(), reverse=True, key=lambda item: item[1]))
 for i in smap.keys():
-	print (i,smap[i])
+	print (i,mmap[i],smap[i])
 
 print (len(smap.keys()))
 
