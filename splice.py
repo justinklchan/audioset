@@ -29,19 +29,20 @@ for id in ids:
 			fs.append(i)
 
 	for file in tqdm(fs):
-		oname=file
-		if '.m4a' in file:
-			file=file[:-4]
-		elif '.webm' in file:
-			file=file[:-5]
-		if not os.path.exists(os.path.join(nid,file+'_out.wav')):
-			start,l=find(file)
-			file=os.path.join(nid,file)
-			oname=os.path.join(nid,oname)
-			cmd = 'ffmpeg -ss '+str(start)+' -i "'+oname+'" -t '+str(l)+' "'+file+'_out.wav"'
-			print (cmd)
-			os.system(cmd)
-			print ("FOLDER ",folder_id,len(ids))
+		if '.m4a' in file or '.webm' in file:
+			oname=file
+			if '.m4a' in file:
+				file=file[:-4]
+			elif '.webm' in file:
+				file=file[:-5]
+			if not os.path.exists(os.path.join(nid,file+'_out.wav')):
+				start,l=find(file)
+				file=os.path.join(nid,file)
+				oname=os.path.join(nid,oname)
+				cmd = 'ffmpeg -ss '+str(start)+' -i "'+oname+'" -t '+str(l)+' "'+file+'_out.wav"'
+				print (cmd)
+				os.system(cmd)
+				print ("FOLDER ",folder_id,len(ids))
 	folder_id+=1
 
 
