@@ -13,8 +13,10 @@ for line in lines:
 		print (line)
 		fold=elts[-3]
 		fid=elts[0]
-		oname='/gscratch/cse/jucha/audioset/UrbanSounds8K/UrbanSound8K/audio/fold'+str(fold)+'/'+str(fid)
-		nname='/gscratch/cse/jucha/audioset/UrbanSounds8K/UrbanSound8K/audio/'+className+'/'
-		shutil.copy(oname,nname)
-		print (oname,nname)
+		foreground=int(elts[-4])
+		if foreground==1:
+			oname='/gscratch/cse/jucha/audioset/UrbanSounds8K/UrbanSound8K/audio/fold'+str(fold)+'/'+str(fid)
+			nname='/gscratch/cse/jucha/audioset/UrbanSounds8K/UrbanSound8K/audio/'+className+'/'
+			shutil.copy(oname,nname)
+			print (oname,nname)
 # 100032-3-0-0.wav,100032,0.0,0.317551,1,5,3,dog_bark

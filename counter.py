@@ -31,10 +31,10 @@ ids=[
 	# "/m/05kq4",
 
     "_m_03qtwd",
-    "_m_02rlv9",
+    # "_m_02rlv9",
     "_m_07rkbfh",
     "_m_07qfr4h",
-    "_m_0c3f7m",
+    # "_m_0c3f7m",
     "_m_03m9d0z",
     "_m_04rlf",
     "_m_07pbtc8"
