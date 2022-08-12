@@ -79,7 +79,7 @@ for i in ids:
 
 smap=dict(sorted(mmap.items(), reverse=True, key=lambda item: item[1]))
 for i in smap.keys():
-	print (i,namemap[i[:-1]],smap[i])
+	print (i,namemap[i.split(',')[0]],smap[i])
 
 print (len(smap.keys()))
 
