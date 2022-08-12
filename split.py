@@ -41,10 +41,9 @@ def split_urban():
 	label_map={
 		'air_conditioner':'Air_conditioner',
 		'car_horn':'Car_horn',
-		'dog_bark':'Dog_bark',
 		'drilling':'Drilling',
-		# 'engine_idling':'Engine_idling',
-		# 'jackhammer':'Jackhammer',
+		'engine_idling':'Engine_idling',
+		'jackhammer':'Jackhammer',
 		'siren':'Siren'
 	}
 	
@@ -104,13 +103,18 @@ def split_yt():
 		'_m_015p6':'Bird',
 		'_t_dd00002':'Baby',
 		'_m_0d31p':'Vacuum',
-		'_m_05kq4':'Ocean'
+		'_m_05kq4':'Ocean',
+		'_m_0c3f7m':'Fire_alarm'
+		'_m_02rlv9':'Motorboat'
+		'_m_04rlf':'Music'
+		'_m_03m9d0z':'Wind'
+		'_m_03qtwd':'Crowd'
 	}
 
 	fout=open('/gscratch/cse/jucha/FSDKaggle2018_audioset/FSDKaggle2018.meta/test_post_competition_scoring_clips.csv','a')
 	od='/gscratch/cse/jucha/audioset/curated/'
 	nd='/gscratch/cse/jucha/FSDKaggle2018_audioset/FSDKaggle2018.audio_test/'
-	for c in ['_m_015p6','_t_dd00002','_m_0d31p','_m_05kq4']:
+	for c in label_map.keys():
 		fs=sorted(os.listdir(od+c))
 		test=fs[int(len(fs)*.9):]
 		print (len(test))
@@ -125,7 +129,7 @@ def split_yt():
 	fout=open('/gscratch/cse/jucha/FSDKaggle2018_audioset/FSDKaggle2018.meta/train_post_competition.csv','a')
 	od='/gscratch/cse/jucha/audioset/curated/'
 	nd='/gscratch/cse/jucha/FSDKaggle2018_audioset/FSDKaggle2018.audio_train/'
-	for c in ['_m_015p6','_t_dd00002','_m_0d31p','_m_05kq4']:
+	for c in label_map.keys():
 		fs=sorted(os.listdir(od+c))
 		train=fs[:int(len(fs)*.9)]
 		print (len(train))
