@@ -109,6 +109,7 @@ def split_yt():
 		'_m_04rlf':'Music',
 		'_m_03m9d0z':'Wind',
 		'_m_03qtwd':'Crowd'
+		'_m_07pbtc8':'Walking'
 	}
 
 	fout=open('/gscratch/cse/jucha/FSDKaggle2018_audioset/FSDKaggle2018.meta/test_post_competition_scoring_clips.csv','a')
